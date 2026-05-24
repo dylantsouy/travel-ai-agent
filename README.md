@@ -187,6 +187,21 @@ Copy-Item -LiteralPath "$src\*" -Destination $dest -Recurse -Force
 
 之後在任意 Codex 對話中可以直接提到相關任務，例如「規劃日本行程」、「查台幣換日圓」、「估算旅遊預算」。
 
+## MCP 練習工具
+
+本專案附一個最小可跑的 Travel Tools MCP server：
+
+- `.codex/mcp/travel-tools-server.mjs`
+- `.codex/mcp/test-client.mjs`
+
+目前提供十五個工具：`travel_geocode`、`travel_weather_forecast`、`travel_currency_convert`、`travel_route_estimate`、`travel_route_sequence_estimate`、`travel_route_optimize`、`travel_export_itinerary_csv`、`travel_export_itinerary_xlsx`、`travel_validate_itinerary_day`、`travel_dedupe_tours`、`travel_budget_estimate`、`travel_format_place_name`、`travel_itinerary_schema_validate`、`travel_itinerary_to_markdown`、`travel_markdown_table_lint`。可先本地測試：
+
+```powershell
+node .codex\mcp\test-client.mjs
+```
+
+完整設定範例見 `.codex/mcp/README.md`。
+
 ## 注意事項
 
 - 航班、機型、匯率、天氣、簽證、飯店價格、交通班次、景點與餐廳營業時間都需要即時查證。

@@ -37,6 +37,8 @@ description: "試算旅遊費用、計算旅遊預算、估算花費、人均費
 
 ### 4. 計算邏輯
 
+若 `travel_tools` MCP server 可用，可用 `travel_budget_estimate` 依人數、天數、晚數、匯率與結構化費用項目試算總預算與人均費用；匯率可先由 `currency-converter` 或 `travel_currency_convert` 取得。
+
 ```
 機票（來回）= 查詢 Google Flights 參考均價
 住宿 = 每晚均價 × (天數 - 1)
