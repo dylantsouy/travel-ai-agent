@@ -49,12 +49,12 @@
 
 | 地點 | 待處理事件 | 抵達 | 停留 | 出發 | 採用交通 | 備註 | 備選 |
 |---|---|---:|---:|---:|---|---|---|
-| [JR Kyushu Hotel Blossom Hakata Chuo](https://www.google.com/maps/search/?api=1&query=JR%20Kyushu%20Hotel%20Blossom%20Hakata%20Chuo) | 起床 / 盥洗 / 吃早餐 / check out / 寄放行李 | 07:30 | 02:30 | 10:00 | 步行 | 早餐 07:00-10:00 |  |
-| [太宰府天滿宮](https://www.google.com/maps/search/?api=1&query=%E5%A4%AA%E5%AE%B0%E5%BA%9C%E5%A4%A9%E6%BB%BF%E5%AE%AE) | 參拜 / 拍照 | 10:03 | 00:58 | 11:01 | 步行 3 分 | 御本殿修繕期間可拍臨時殿與參道 | 九州國立博物館 / 光明禪寺 |
-| [やす武](https://www.google.com/maps/search/?api=1&query=%E3%82%84%E3%81%99%E6%AD%A6%20%E5%A4%AA%E5%AE%B0%E5%BA%9C) | 吃午餐 | 12:05 | 01:00 | 13:05 | 步行 5 分 | 太宰府名物蕎麥 | [かさの家](https://www.google.com/maps/search/?api=1&query=%E3%81%8B%E3%81%95%E3%81%AE%E5%AE%B6%20%E5%A4%AA%E5%AE%B0%E5%BA%9C) / [茶房きくち](https://www.google.com/maps/search/?api=1&query=%E8%8C%B6%E6%88%BF%E3%81%8D%E3%81%8F%E3%81%A1%20%E5%A4%AA%E5%AE%B0%E5%BA%9C) |
-| [かさの家](https://www.google.com/maps/search/?api=1&query=%E3%81%8B%E3%81%95%E3%81%AE%E5%AE%B6%20%E5%A4%AA%E5%AE%B0%E5%BA%9C) | 買梅枝餅 | 13:10 | 00:20 | 13:30 | 步行 5 分 | 現烤梅枝餅 | [茶房きくち](https://www.google.com/maps/search/?api=1&query=%E8%8C%B6%E6%88%BF%E3%81%8D%E3%81%8F%E3%81%A1%20%E5%A4%AA%E5%AE%B0%E5%BA%9C) / [寺田屋](https://www.google.com/maps/search/?api=1&query=%E5%AF%BA%E7%94%B0%E5%B1%8B%20%E5%A4%AA%E5%AE%B0%E5%BA%9C) |
-| [博多ほたる 西中洲本店](https://www.google.com/maps/search/?api=1&query=%E5%8D%9A%E5%A4%9A%E3%81%BB%E3%81%9F%E3%82%8B%20%E8%A5%BF%E4%B8%AD%E6%B4%B2%E6%9C%AC%E5%BA%97) | 小酌 / 晚餐收尾 | 20:30 | 01:00 | 21:30 | 步行 8 分 | 若 20:45 後才抵達，改備選 | [博多水炊き とり田](https://www.google.com/maps/search/?api=1&query=%E5%8D%9A%E5%A4%9A%E6%B0%B4%E7%82%8A%E3%81%8D%20%E3%81%A8%E3%82%8A%E7%94%B0) / [焼とりの八兵衛](https://www.google.com/maps/search/?api=1&query=%E7%84%BC%E3%81%A8%E3%82%8A%E3%81%AE%E5%85%AB%E5%85%B5%E8%A1%9B%20%E7%A6%8F%E5%B2%A1) |
-| [JR Kyushu Hotel Blossom Hakata Chuo](https://www.google.com/maps/search/?api=1&query=JR%20Kyushu%20Hotel%20Blossom%20Hakata%20Chuo) | 回房 / 洗澡 / 整理 / 睡覺 | 21:38 | 00:52 | 22:30 | 步行 | 預計 22:30 睡覺 |  |
+| [JR Kyushu Hotel Blossom Hakata Chuo](https://www.google.com/maps/search/?api=1&query=JR%20Kyushu%20Hotel%20Blossom%20Hakata%20Chuo) 🛅 | 起床 / 盥洗 / 吃早餐 / check out / 寄放行李 | 07:30 | 02:30 | 10:00 | 同地點 | 早餐 07:00-10:00 |  |
+| [太宰府天滿宮](https://www.google.com/maps/search/?api=1&query=%E5%A4%AA%E5%AE%B0%E5%BA%9C%E5%A4%A9%E6%BB%BF%E5%AE%AE) ⛩️ | 參拜 / 拍照 | 10:03 | 00:58 | 11:01 | 🚶 步行 3 分 | 御本殿修繕期間可拍臨時殿與參道 | 九州國立博物館 🏛️ / 光明禪寺 ⛩️ |
+| [やす武](https://www.google.com/maps/search/?api=1&query=%E3%82%84%E3%81%99%E6%AD%A6%20%E5%A4%AA%E5%AE%B0%E5%BA%9C) 🍜 | 吃午餐 | 12:05 | 01:00 | 13:05 | 🚶 步行 5 分 | 太宰府名物蕎麥 | [かさの家](https://www.google.com/maps/search/?api=1&query=%E3%81%8B%E3%81%95%E3%81%AE%E5%AE%B6%20%E5%A4%AA%E5%AE%B0%E5%BA%9C) 🍡 / [茶房きくち](https://www.google.com/maps/search/?api=1&query=%E8%8C%B6%E6%88%BF%E3%81%8D%E3%81%8F%E3%81%A1%20%E5%A4%AA%E5%AE%B0%E5%BA%9C) 🍵 |
+| [かさの家](https://www.google.com/maps/search/?api=1&query=%E3%81%8B%E3%81%95%E3%81%AE%E5%AE%B6%20%E5%A4%AA%E5%AE%B0%E5%BA%9C) 🍡 | 買梅枝餅 | 13:10 | 00:20 | 13:30 | 🚶 步行 5 分 | 現烤梅枝餅 | [茶房きくち](https://www.google.com/maps/search/?api=1&query=%E8%8C%B6%E6%88%BF%E3%81%8D%E3%81%8F%E3%81%A1%20%E5%A4%AA%E5%AE%B0%E5%BA%9C) 🍵 / [寺田屋](https://www.google.com/maps/search/?api=1&query=%E5%AF%BA%E7%94%B0%E5%B1%8B%20%E5%A4%AA%E5%AE%B0%E5%BA%9C) 🍡 |
+| [博多ほたる 西中洲本店](https://www.google.com/maps/search/?api=1&query=%E5%8D%9A%E5%A4%9A%E3%81%BB%E3%81%9F%E3%82%8B%20%E8%A5%BF%E4%B8%AD%E6%B4%B2%E6%9C%AC%E5%BA%97) 🍶 | 小酌 / 晚餐收尾 | 20:30 | 01:00 | 21:30 | 🚶 步行 8 分 | 若 20:45 後才抵達，改備選 | [博多水炊き とり田](https://www.google.com/maps/search/?api=1&query=%E5%8D%9A%E5%A4%9A%E6%B0%B4%E7%82%8A%E3%81%8D%20%E3%81%A8%E3%82%8A%E7%94%B0) 🍜 / [焼とりの八兵衛](https://www.google.com/maps/search/?api=1&query=%E7%84%BC%E3%81%A8%E3%82%8A%E3%81%AE%E5%85%AB%E5%85%B5%E8%A1%9B%20%E7%A6%8F%E5%B2%A1) 🍜 |
+| [JR Kyushu Hotel Blossom Hakata Chuo](https://www.google.com/maps/search/?api=1&query=JR%20Kyushu%20Hotel%20Blossom%20Hakata%20Chuo) 🏨 | 回房 / 洗澡 / 整理 / 睡覺 | 21:38 | 00:52 | 22:30 | 🚶 步行 | 預計 22:30 睡覺 |  |
 
 ## 內部營業時間 / 最晚抵達檢查表
 
@@ -118,6 +118,6 @@
 - 不寫內部安排話術，例如「這版偏保守」「位置順路」「早上避熱」「班次出發前查」「避開海鮮」。
 - 不寫資料查證口吻，例如「官方列晚餐」「官網寫營業時間」「Google 顯示」；這類資訊保留在內部檢查，主表與出發前確認只寫使用者需要採取的動作。
 - 未確認事項集中在「出發前確認」。
-- 景點、餐廳、飯店與車站首次出現時盡量使用 Markdown 連結；備選餐廳與備選住宿也盡量使用 Markdown 連結。
+- 景點、餐廳、飯店與車站首次出現時盡量使用 Markdown 連結；備選餐廳與備選住宿也盡量使用 Markdown 連結。若介面因 Google Maps 連結顯示 favicon，仍保留地點名稱可點擊優先。
 - 不輸出「關鍵營業與交通檢查」「主要來源」「資料來源整理」等獨立段落；必要來源用可點擊連結融入相關項目。
 - 不輸出「當日路線檢查」技術清單；每日表格後改用「當日行程大綱」自然段落。
