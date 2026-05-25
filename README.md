@@ -1,4 +1,4 @@
-﻿# Travel Agent for Codex
+# Travel Agent for Codex
 
 這是一組給 Codex 使用的旅遊規劃 agents 與 skills。你只要用自然語言說明目的地、日期、天數、人數與偏好，Codex 就會依規則規劃可執行行程，包含航班、住宿、交通班次、餐廳、預算、天氣、簽證、匯率與每日時間表。
 
@@ -7,7 +7,7 @@
 在 Codex 開啟這個資料夾：
 
 ```powershell
-cd C:\Users\bear8\Downloads\travel-ai-agent
+cd C:\path\to\travel-ai-agent
 ```
 
 然後直接輸入：
@@ -235,7 +235,7 @@ travel-ai-agent/
 如果你希望任何工作區都能使用這些 skills，可以把 `.codex/skills` 複製到你的 Codex skills 目錄：
 
 ```powershell
-$src = "C:\Users\bear8\Downloads\travel-ai-agent\.codex\skills"
+$src = "C:\path\to\travel-ai-agent\.codex\skills"
 $dest = "$env:USERPROFILE\.codex\skills"
 Copy-Item -LiteralPath "$src\*" -Destination $dest -Recurse -Force
 ```

@@ -139,7 +139,28 @@ Rome2Rio、TripAdvisor、Lonely Planet、TimeOut、Numbeo 等適合作為方向�
 
 1 day tour 推薦與比較需先依路線 / 主題去重，再選平台商品。預設推薦清單應呈現不同體驗方向，例如歷史城區導覽、郊區自然景觀、溫泉、海島、酒莊、夜遊或市場文化；不要把同一路線的 Klook、KKday、GetYourGuide、Viator 商品當成多個不同選項。只有使用者已指定某一路線、要求比價、要求「完整比較」、或該路線集合地點 / 語言 / 取消規則差異會明顯影響決策時，才列同一路線的多平台商品比較。
 
-若 `travel_tools` MCP server 可用，可用 `travel_dedupe_tours` 將 1 day tour 商品標題依路線 / 主題分群去重；可用 `travel_format_place_name` 統一地點名稱格式與 icon 後置規則。
+## MCP / 工具使用規則
+
+若 `travel_tools` MCP server 已暴露為可呼叫工具，正式行程與結構化輸出必須優先嘗試使用；不可在可用時默默改用 shell、手寫表格或備援 script。
+
+正式行程啟動前先做一次內部 MCP preflight：
+
+- 若可呼叫 `travel_tools`，依任務使用對應工具協助驗證、去重、估算或匯出。
+- 若專案有設定 `travel_tools` 但本輪對話未暴露可呼叫工具，或呼叫失敗，需在工作更新或最終回覆中簡短說明「`travel_tools` 目前不可用，已改用 fallback」，再繼續完成任務。
+- 快問快答、單點建議或只需方向性回答時，不必強制使用 MCP；若資訊涉及最新資料，仍依查證規則使用官方或主流來源。
+- MCP 結果不能取代官方查證；航班、入境、營業時間、餐廳、交通班次、tour 開賣狀態、價格與取消規則仍以官方或主流平台為準。
+
+建議對應工具：
+
+- `travel_dedupe_tours`：1 day tour 推薦 / 比較時，先依路線、主題與體驗去重。
+- `travel_format_place_name`：正式主表地點欄與 icon 格式整理。
+- `travel_weather_forecast`：14 天內逐日天氣初查；超出範圍時改用季節氣候，不假裝知道逐日預報。
+- `travel_currency_convert`：預算與匯率換算初估；實際換現鈔仍以銀行牌告為準。
+- `travel_route_estimate`、`travel_route_sequence_estimate`、`travel_route_optimize`：景點順序、步行 / 自駕 / 計程車動線初估；正式大眾運輸班次仍需查官方或 Google Maps。
+- `travel_budget_estimate`：正式預算表初估與人均拆分。
+- `travel_itinerary_schema_validate`、`travel_validate_itinerary_day`：正式行程輸出前檢查每日列、行李節點、交通欄、餐廳備選與欄位語義。
+- `travel_itinerary_to_markdown`、`travel_markdown_table_lint`：正式 Markdown 表格生成與跑版檢查。
+- `travel_export_itinerary_csv`、`travel_export_itinerary_xlsx`：使用者要求 CSV / Excel / Google Maps 清單 / 表格檔時優先使用。
 
 ## Skill 路由
 
@@ -168,7 +189,7 @@ Rome2Rio、TripAdvisor、Lonely Planet、TimeOut、Numbeo 等適合作為方向�
 典型多日出國正式行程順序：
 
 ```text
-destination-profile → flight-search → visa-checker → weather-checker → hotel-recommender → itinerary-luggage-nodes → itinerary-planner → map-distance → food-recommender → budget-calculator → currency-converter → itinerary-output-format → luggage-packing
+MCP preflight → destination-profile → flight-search → visa-checker → weather-checker → hotel-recommender → itinerary-luggage-nodes → itinerary-planner → map-distance → food-recommender → budget-calculator → currency-converter → itinerary-output-format → MCP validation / table lint → luggage-packing
 ```
 
 展示、健檢、版本差異比較、天氣備案、tour 去重比較與匯出屬於可選輔助流程，不放進典型正式行程順序；除非使用者明確要求，不得改變正式行程的既有輸出內容與格式。
