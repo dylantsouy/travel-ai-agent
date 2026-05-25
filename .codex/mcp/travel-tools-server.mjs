@@ -456,6 +456,7 @@ function validateItineraryDay({ rows }) {
 
   rows.forEach((row, index) => {
     const rowNo = index + 1;
+    const isLastRow = index === rows.length - 1;
     const location = String(row.location ?? "");
     const event = String(row.event ?? "");
     const transport = String(row.transport ?? "");
@@ -463,6 +464,7 @@ function validateItineraryDay({ rows }) {
 
     if (locationStartEmoji.test(location)) findings.push(`[P2] Row ${rowNo}: location icon should be after the place name.`);
     if (transportBadWords.test(transport)) findings.push(`[P1] Row ${rowNo}: transport contains a non-transport activity: ${transport}`);
+    if (isLastRow && transport.trim()) findings.push(`[P2] Row ${rowNo}: last row transport should be blank because there is no next stop.`);
     if (transport && !transportEmoji.test(transport)) findings.push(`[P3] Row ${rowNo}: transport should start with a transport icon or 'same place'.`);
     if (event && location && event.includes(location.replace(/\s*[^\p{Letter}\p{Number}]+$/u, ""))) findings.push(`[P2] Row ${rowNo}: event appears to repeat the location name.`);
     if (/lunch|dinner|午餐|晚餐|吃/u.test(event)) {
@@ -570,9 +572,12 @@ function validateItinerarySchema({ days }) {
 
     rows.forEach((row, rowIndex) => {
       const rowNo = rowIndex + 1;
-      for (const key of ["location", "event", "arrival", "stay", "departure", "transport"]) {
+      const isLastRow = rowIndex === rows.length - 1;
+      for (const key of ["location", "event", "arrival", "stay", "departure"]) {
         if (!row[key]) findings.push(`[P1] ${label} row ${rowNo}: missing required field '${key}'.`);
       }
+      if (!isLastRow && !row.transport) findings.push(`[P1] ${label} row ${rowNo}: missing required field 'transport'.`);
+      if (isLastRow && row.transport) findings.push(`[P2] ${label} row ${rowNo}: last row transport should be blank because there is no next stop.`);
       if (row.location.startsWith(" ")) findings.push(`[P3] ${label} row ${rowNo}: location has leading whitespace.`);
       if (/^\p{Extended_Pictographic}/u.test(row.location)) findings.push(`[P2] ${label} row ${rowNo}: location icon should be after text.`);
       if (/breakfast|lunch|dinner|shopping|museum|restaurant|hotel breakfast/i.test(row.transport)) findings.push(`[P1] ${label} row ${rowNo}: transport contains non-transport text.`);

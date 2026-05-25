@@ -1,0 +1,4 @@
+interface:
+  display_name: "天氣備案"
+  short_description: "建立雨天、高溫、強風或颱風備案。"
+  default_prompt: "請用 $weather-contingency 把這份行程改成天氣備案。"

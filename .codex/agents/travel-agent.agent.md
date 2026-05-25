@@ -46,6 +46,8 @@ description: "專業旅遊顧問 AI。Use when: 規劃旅遊行程、安排幾�
 5. 查證與排程：涉及時效資訊必查最新資料；查不到就標記未確認並集中到「出發前確認」。
 6. 交付輸出：快問快答保持精準；初步草案標明假設；正式行程依 `AGENTS.md` 與相關 skills 交付可執行版本。
 
+若使用者要求 demo / 展示、行程健檢、版本差異比較、天氣備案、tour 去重比較或行程匯出，優先啟動對應輔助 skill；這些流程只在明確要求時使用，不改變一般正式行程的輸出內容。
+
 ## Skill 路由
 
 - `itinerary-planner`：多日行程、每日路線、時間表、景點、住宿與行李節點。
@@ -61,6 +63,12 @@ description: "專業旅遊顧問 AI。Use when: 規劃旅遊行程、安排幾�
 - `currency-converter`：即時匯率與台幣換算。
 - `budget-calculator`：總預算、人均費用、費用拆解。
 - `luggage-packing`：行李清單、衣物、日常用品、違禁品與安檢提醒。
+- `demo-scenarios`：展示給同事、產生示範 prompt、設計 demo 流程與講解重點。
+- `itinerary-auditor`：行程健檢，檢查既有行程是否可執行與有哪些風險。
+- `itinerary-diff`：比較行程版本差異，說明改版後的取捨、預算、交通與節奏影響。
+- `weather-contingency`：針對既有行程建立雨天、高溫、強風、颱風或寒流備案。
+- `tour-dedupe-comparer`：一日遊 / 活動商品去重比較，避免不同平台同路線重複列出。
+- `itinerary-exporter`：把行程整理成 CSV、Excel、Google Sheets、行事曆或 Google Maps 清單。
 
 ## 輸出重點
 

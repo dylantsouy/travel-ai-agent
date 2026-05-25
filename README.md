@@ -105,6 +105,7 @@ Travel Agent 會盡量輸出可以直接照著走的版本：
 - 天氣與必要風險提醒
 - 預算估算與台幣 / 當地貨幣換算
 - 出發前確認事項與可點擊連結
+- 行程最後會提示可匯出成 Excel / CSV / Google Maps 清單；若介面支援按鈕，會優先用「匯出 Excel」按鈕
 
 每日行程表主要欄位：
 
@@ -112,12 +113,60 @@ Travel Agent 會盡量輸出可以直接照著走的版本：
 地點 | 待處理事件 | 抵達 | 停留 | 出發 | 採用交通 | 備註 | 備選
 ```
 
+## 展示用可選功能
+
+這些功能只有在你明確要求時才啟動，不會改變一般正式行程輸出：
+
+| 功能 | 請這樣說 | 適合展示 |
+|---|---|---|
+| Demo 情境 | `請用 demo-scenarios 幫我準備 7 分鐘展示腳本。` | 給同事看 prompt、流程與講解重點 |
+| 行程健檢 | `請用 itinerary-auditor 幫我檢查這份行程可不可照走。` | 抓交通過趕、拖行李、餐廳繞路、營業時間風險 |
+| 版本差異 | `請用 itinerary-diff 把這份行程改成輕鬆版，只列差異。` | 展示同一行程如何改版且不重貼全文 |
+| 天氣備案 | `請用 weather-contingency 把第 3 天改成雨天備案。` | 展示雨天 / 高溫 / 颱風時如何局部改排 |
+| Tour 去重 | `請用 tour-dedupe-comparer 比較大阪出發一日遊，不要重複路線。` | 展示先依路線 / 主題去重，再比平台商品 |
+| 行程匯出 | `請用 itinerary-exporter 把這份行程轉成 Excel。` | 展示行程可產生 CSV / Excel 實體檔，或轉成地圖清單與行事曆欄位 |
+
+### Demo 快速指令
+
+```text
+請用 demo-scenarios 幫我準備 Travel Agent 的 12 分鐘同事展示，包含可複製 prompt、預期亮點與講解備註。
+```
+
+```text
+請用 itinerary-auditor 幫我健檢這份大阪行程是否可照走：
+Day 1：12:30 抵達關西機場，13:00 到難波飯店寄放行李，13:20 去大阪城，15:00 去京都清水寺，18:00 回道頓堀吃晚餐，21:00 check in。
+Day 2：環球影城一整天，晚上再去神戶看夜景。
+Day 3：早上退房後拖行李去黑門市場、心齋橋購物，下午搭車去京都，晚上入住京都。
+```
+
+```text
+請用 itinerary-diff 示範同一趟東京 5 天 4 夜，在標準版、親子版、背包客版、高端版之間會有哪些差異。先做比較表，不用排完整行程。
+```
+
+```text
+請用 weather-contingency 示範把大阪行程第 3 天改成雨天備案，只輸出第 3 天差異與替代動線。
+```
+
+```text
+請用 tour-dedupe-comparer 比較大阪出發的一日遊，預設 2 人、不自駕、想看中文導遊選項；不要把同一路線的不同平台商品列成多個選項。
+```
+
+```text
+請用 itinerary-exporter 把這份行程整理成 Google Maps 搜尋清單欄位，不用重排行程。
+```
+
+若本地 Python 可用，`itinerary-exporter` 也包含備援 script，可在未啟用 MCP 時產生 `.csv` 或 `.xlsx`：
+
+```powershell
+python .codex\skills\itinerary-exporter\scripts\export_itinerary.py --input itinerary.json --format both --kind itinerary --output fukuoka-itinerary.xlsx
+```
+
 ## 輸出規則重點
 
 - 每天第一列一定從飯店開始，標示起床、早餐、整理行李、出門時間。
 - 每天最後一列一定回飯店，並標示預計睡覺時間。
 - 不會讓你拖著大行李逛景點；會安排寄放行李或置物櫃。
-- 交通只放已精算的採用方案，不列一堆會打亂時間的第二方案。
+- `採用交通` 寫的是從本列地點前往下一列地點的已精算方案；每天最後一列留空。
 - 餐廳會寫實際店名，不只寫「拉麵」「明太子」。
 - 備選景點與備選餐廳會放在 `備選` 欄。
 - 備註盡量精簡，只寫使用者需要看的提醒。
@@ -156,13 +205,19 @@ travel-ai-agent/
 │   └── skills/
 │       ├── budget-calculator/
 │       ├── currency-converter/
+│       ├── demo-scenarios/
 │       ├── flight-search/
 │       ├── food-recommender/
 │       ├── hotel-recommender/
+│       ├── itinerary-auditor/
+│       ├── itinerary-diff/
+│       ├── itinerary-exporter/
 │       ├── itinerary-planner/
 │       ├── map-distance/
+│       ├── tour-dedupe-comparer/
 │       ├── visa-checker/
-│       └── weather-checker/
+│       ├── weather-checker/
+│       └── weather-contingency/
 ```
 
 ## Codex 會讀哪些檔案

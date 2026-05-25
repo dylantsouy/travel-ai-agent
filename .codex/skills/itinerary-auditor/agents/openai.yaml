@@ -1,0 +1,4 @@
+interface:
+  display_name: "行程健檢"
+  short_description: "檢查行程可行性、時間、行李與風險。"
+  default_prompt: "請用 $itinerary-auditor 檢查這份旅遊行程是否可照走。"

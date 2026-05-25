@@ -1,0 +1,4 @@
+interface:
+  display_name: "展示情境"
+  short_description: "產生 Travel Agent 展示腳本與示範 prompt。"
+  default_prompt: "請用 $demo-scenarios 準備一段 Travel Agent 展示流程。"

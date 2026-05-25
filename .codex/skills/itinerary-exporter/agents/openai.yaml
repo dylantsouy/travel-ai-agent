@@ -1,0 +1,4 @@
+interface:
+  display_name: "行程匯出"
+  short_description: "將行程匯出成 CSV、Excel 或地圖清單。"
+  default_prompt: "請用 $itinerary-exporter 把這份行程匯出成結構化檔案。"

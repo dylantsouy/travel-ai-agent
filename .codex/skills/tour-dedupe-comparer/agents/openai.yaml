@@ -1,0 +1,4 @@
+interface:
+  display_name: "一日遊去重"
+  short_description: "依路線與主題去重比較一日遊商品。"
+  default_prompt: "請用 $tour-dedupe-comparer 比較一日遊，避免重複路線。"

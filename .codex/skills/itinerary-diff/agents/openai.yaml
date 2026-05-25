@@ -1,0 +1,4 @@
+interface:
+  display_name: "行程差異"
+  short_description: "比較行程版本差異、取捨與實際影響。"
+  default_prompt: "請用 $itinerary-diff 比較這兩版行程的差異與取捨。"
